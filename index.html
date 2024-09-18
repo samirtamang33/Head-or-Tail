@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Head or Tail</title>
+  </head>
+  <body>
+    <h1>Head or Tail Game</h1>
+    <div id="username-section">
+      <form onsubmit="username_submit(event)">
+        <h2>Enter Your Username</h2>
+        <input type="text" id="username" />
+        <button class="user-submit" type="submit">Start Game</button>
+      </form>
+    </div>
+    <div id="game-section">
+      Welcome
+      <span id="user"></span>
+      <br />
+      <br />
+      <div class="side-chooser">
+        Choose your side <br /><br />
+        <button class="head-side" onclick="start_game('head')">Head</button>
+        <button class="tail-side" onclick="start_game('tail')">Tail</button>
+      </div>
+      <div id="flipping">
+        flipping...
+        <br />
+        <img src="./Images/loading.gif" />
+      </div>
+      <div id="result">Result</div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
